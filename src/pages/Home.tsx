@@ -1,4 +1,5 @@
-import { Box, Paper, Typography, Grid } from '@mui/material'
+import { Box, Paper, Typography } from '@mui/material'
+import Grid from "@mui/material/Grid2"
 
 export function Home() {
     return (
@@ -14,8 +15,8 @@ export function Home() {
                     A seguir, conheça mais sobre as áreas e as oportunidades que a Faculdade UNIESP oferece para você.
                 </Typography>
             </Paper>
-            <Grid container spacing={4}>
-                <Grid item xs={12} md={4}>
+            <Grid container spacing={4} columnSpacing={{xs:12, md:4}}>
+                <Grid size={4}>
                     <Paper elevation={3} sx={{ p: 3, backgroundColor: '#ffffff', borderRadius: '8px', textAlign: 'center' }}>
                         <img
                             src="https://images.unsplash.com/photo-1556761175-4b46a572b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGNvbGxlZ2V8ZW58MHx8fHwxNjI2NzUwNzY0&ixlib=rb-1.2.1&q=80&w=400"
@@ -31,7 +32,7 @@ export function Home() {
                     </Paper>
                 </Grid>
 
-                <Grid item xs={12} md={4}>
+                <Grid size={4}>
                     <Paper elevation={3} sx={{ p: 3, backgroundColor: '#ffffff', borderRadius: '8px', textAlign: 'center' }}>
                         <img
                             src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGxpYnJhcnl8ZW58MHx8fHwxNjI2NzUwODE2&ixlib=rb-1.2.1&q=80&w=400"
@@ -47,7 +48,7 @@ export function Home() {
                     </Paper>
                 </Grid>
 
-                <Grid item xs={12} md={4}>
+                <Grid size={4}>
                     <Paper elevation={3} sx={{ p: 3, backgroundColor: '#ffffff', borderRadius: '8px', textAlign: 'center' }}>
                         <img
                             src="https://images.unsplash.com/photo-1652974731232-efc86a9bd985?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -65,7 +66,7 @@ export function Home() {
             </Grid>
 
             <Grid container spacing={4} sx={{ mt: 4 }}>
-                <Grid item xs={12} md={6}>
+                <Grid >
                     <Paper elevation={3} sx={{ p: 3, backgroundColor: '#ffffff', borderRadius: '8px', textAlign: 'center' }}>
                         <Typography variant='h6' gutterBottom mt={2}>
                             Parcerias com Empresas
@@ -76,7 +77,7 @@ export function Home() {
                     </Paper>
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid >
                     <Paper elevation={3} sx={{ p: 3, backgroundColor: '#ffffff', borderRadius: '8px', textAlign: 'center' }}>
                         <Typography variant='h6' gutterBottom mt={2}>
                             Compromisso com a Educação
