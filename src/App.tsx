@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar'
 import { Home } from './pages/Home'
 import { Box, Container, CssBaseline } from '@mui/material'
 import { College } from './pages/College'
+import { LowDataProtection } from './pages/LowDataProtection'
 
 function App() {
 
@@ -22,8 +23,8 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
              <Route path="/a-faculdade" element={<College />} />
-            {/*<Route path="/dpo-lgpd" element={<DpoLgpd />} />
-            <Route path="/noticias" element={<Noticias />} />
+            <Route path="/dpo-lgpd" element={<LowDataProtection />} />
+            {/*<Route path="/noticias" element={<Noticias />} />
             <Route path="/visualiza-noticia/:id" element={<VisualizaNoticia />} />
             <Route path="/admin-noticias" element={<AdminNoticias />} />
             <Route path="/cadastrar-noticia" element={<CadastroNoticia />} />
