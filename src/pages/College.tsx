@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from '@mui/material'
 import Grid from "@mui/material/Grid2"
 
-export function Home() {
+export function College() {
 
     const cardStyle = {
         backgroundColor: '#ffffff',
@@ -11,15 +11,11 @@ export function Home() {
         p: 3
     };
 
-    const rowStyle = {
-        p: 3,
-        backgroundColor: '#ffffff',
-        borderRadius: '8px',
-        textAlign: 'center'
-    };
-    
     return (
         <Box sx={{ p: 4, backgroundColor: '#f0f0f0', borderRadius: '8px' }}>
+            <Typography variant='h3' gutterBottom>
+                A Faculdade
+            </Typography>
             <Paper elevation={3} sx={{ p: 3, mb: 4, backgroundColor: '#ffffff', borderRadius: '8px' }}>
                 <Typography variant='body1' component="p" >
                     A Faculdade UNIESP é uma instituição comprometida em fornecer educação de qualidade, com foco no desenvolvimento profissional e pessoal dos alunos. Nossos cursos são projetados para atender às demandas do mercado de trabalho e preparar nossos alunos para os desafios da vida profissional.
@@ -76,30 +72,6 @@ export function Home() {
                         </Typography>
                         <Typography variant='body2'>
                             O centro de nossa instituição, com salas de aula modernas e laboratórios equipados para atender às necessidades dos cursos.
-                        </Typography>
-                    </Paper>
-                </Grid>
-            </Grid>
-
-            <Grid container spacing={4} sx={{ mt: 4 }}>
-                <Grid >
-                    <Paper elevation={3} sx={rowStyle}>
-                        <Typography variant='h6' gutterBottom mt={2}>
-                            Parcerias com Empresas
-                        </Typography>
-                        <Typography variant='body2'>
-                            A UNIESP mantém parcerias com diversas empresas, permitindo que nossos alunos tenham acesso a oportunidades de estágio e emprego logo após a graduação. Essas parcerias são fundamentais para integrar os estudantes ao mercado e para oferecer uma experiência educacional alinhada com a prática profissional.
-                        </Typography>
-                    </Paper>
-                </Grid>
-
-                <Grid >
-                    <Paper elevation={3} sx={rowStyle}>
-                        <Typography variant='h6' gutterBottom mt={2}>
-                            Compromisso com a Educação
-                        </Typography>
-                        <Typography variant='body2'>
-                            A UNIESP se dedica a oferecer uma educação acessível e de qualidade, acreditando que o conhecimento transforma vidas. Nossos programas são desenhados para preparar os alunos não apenas para carreiras, mas para que eles possam fazer contribuições significativas para a sociedade.
                         </Typography>
                     </Paper>
                 </Grid>
