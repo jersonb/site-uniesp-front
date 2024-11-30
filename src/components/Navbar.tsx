@@ -1,12 +1,12 @@
 import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar } from '@mui/material'
 import { Link } from 'react-router'
 import MenuIcon from '@mui/icons-material/Menu'
-import { useState } from 'react'
+import { BaseSyntheticEvent, useState } from 'react'
 
 export function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null)
 
-  const handleMenuOpen = (event: any) => {
+  const handleMenuOpen = (event: BaseSyntheticEvent) => {
     setAnchorEl(event.currentTarget)
   }
 

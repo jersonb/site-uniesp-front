@@ -3,6 +3,8 @@ import './App.css'
 import { BannerAd } from './components/BannerAd'
 import { Navbar } from './components/Navbar'
 import { Home } from './pages/Home'
+import { News } from './pages/News'
+import { ViewNews } from './pages/ViewNews'
 import { Box, Container, CssBaseline } from '@mui/material'
 import { College } from './pages/College'
 import { LowDataProtection } from './pages/LowDataProtection'
@@ -24,9 +26,9 @@ function App() {
             <Route path="/" element={<Home />} />
              <Route path="/a-faculdade" element={<College />} />
             <Route path="/dpo-lgpd" element={<LowDataProtection />} />
-            {/*<Route path="/noticias" element={<Noticias />} />
-            <Route path="/visualiza-noticia/:id" element={<VisualizaNoticia />} />
-            <Route path="/admin-noticias" element={<AdminNoticias />} />
+            <Route path="/noticias" element={<News />} />
+            <Route path="/visualiza-noticia/:id" element={<ViewNews />} />
+            {/*<Route path="/admin-noticias" element={<AdminNoticias />} />
             <Route path="/cadastrar-noticia" element={<CadastroNoticia />} />
             <Route path="/editar-noticia/:id" element={<EditarNoticia />} /> */}
           </Routes>
