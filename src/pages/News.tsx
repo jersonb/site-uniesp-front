@@ -1,30 +1,19 @@
 import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
 import Grid from "@mui/material/Grid2"
-import axios, { AxiosResponse } from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { NewsResponse, NewsRequests } from '../api/api'
 
-export interface NewsResponse {
-    id: string,
-    title: string,
-    linkImage:string,
-}
 
 export function News() {
-
-    const api = axios.create({
-        baseURL: 'http://localhost:5270/api'
-    });
 
     const [news, setNews] = useState<NewsResponse[]>([]);
 
     useEffect(() => {
-        const fetchNoticias = () => {
-            api.get<Promise<NewsResponse[]>>("news")
-                .then((response: AxiosResponse) => setNews(response.data))
-        }
-
-        fetchNoticias()
+        NewsRequests.getNewsList()
+            .then(news => setNews(news))
+            .catch(console.log);
+        return () => { };
     }, [])
 
     return (
@@ -33,7 +22,7 @@ export function News() {
             <Grid container spacing={4} columnSpacing={{ xs: 12, md: 3 }}>
                 {news.map(n => (
                     <Grid  >
-                        <Card style={{height:'100%'}} sx={{ maxWidth: 345}}>
+                        <Card style={{ height: '100%' }} sx={{ maxWidth: 345 }}>
                             <CardMedia
                                 component="img"
                                 height="140"
