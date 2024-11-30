@@ -7,20 +7,21 @@ import { Link } from 'react-router-dom'
 export interface NewsResponse {
     id: string,
     title: string,
+    linkImage:string,
 }
 
 export function News() {
 
     const api = axios.create({
-        baseURL: 'http://localhost:5270/api/news'
+        baseURL: 'http://localhost:5270/api'
     });
 
-    const [noticias, setNoticias] = useState<NewsResponse[]>([]);
+    const [news, setNews] = useState<NewsResponse[]>([]);
 
     useEffect(() => {
         const fetchNoticias = () => {
-            api.get<Promise<NewsResponse[]>>("")
-                .then((response: AxiosResponse) => setNoticias(response.data))
+            api.get<Promise<NewsResponse[]>>("news")
+                .then((response: AxiosResponse) => setNews(response.data))
         }
 
         fetchNoticias()
@@ -29,21 +30,21 @@ export function News() {
     return (
         <Box sx={{ p: 4 }}>
             <Typography variant="h3" gutterBottom>Notícias</Typography>
-            <Grid container spacing={4} columnSpacing={{ xs: 12, md: 4 }}>
-                {noticias.map(noticia => (
+            <Grid container spacing={4} columnSpacing={{ xs: 12, md: 3 }}>
+                {news.map(n => (
                     <Grid  >
-                        <Card sx={{ maxWidth: 345 }}>
+                        <Card style={{height:'100%'}} sx={{ maxWidth: 345}}>
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image="https://via.placeholder.com/300x140.png?text=Notícia+Imagem"
+                                image={n.linkImage}
                                 alt="Imagem da Notícia"
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    {noticia.title}
+                                    {n.title}
                                 </Typography>
-                                <Link to={`/visualiza-noticia/${noticia.id}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
+                                <Link to={`/visualiza-noticia/${n.id}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
                                     <Typography variant="body2" color="text.secondary">
                                         Ler mais
                                     </Typography>
