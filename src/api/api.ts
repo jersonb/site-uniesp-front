@@ -3,6 +3,7 @@ export interface NewsResponse {
     id: string,
     title: string,
     linkImage: string,
+    content: string
 }
 
 const instance = axios.create({

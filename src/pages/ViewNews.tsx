@@ -1,34 +1,22 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { NewsRequests } from '../api/api'
+import { NewsRequests, NewsResponse } from '../api/api'
 
 export function ViewNews() {
     const { id } = useParams()
-    const [noticia, setNoticia] = useState({})
-
+    const [news, setNews] = useState({} as NewsResponse)
 
     useEffect(() => {
-        const fetchNoticia = async () => {
-            try {
-                const response = await axios.get(url)
-                setNoticia(response.data)
-            } catch (error) {
-                console.error("Erro ao buscar a notícia:", error)
-            }
-        }
-        fetchNoticia()
-
-        NewsRequests.getNews(id)
-        .then(news => setNoticia(news))
-        .catch(console.log);
-    return () => { };
+        NewsRequests.getNews(id as string)
+            .then(news => setNews(news))
+            .catch(console.log);
+        return () => { };
     }, [id])
 
     return (
         <div>
-            <h1>{noticia.titulo}</h1>
-            <p>{noticia.texto}</p>
+            <h1>{news.title}</h1>
+            <p>{news.content}</p>
         </div>
     )
 }
