@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 export interface NewsResponse {
     id: string,
     title: string,
+    subtitle:string,
     linkImage: string,
     content: string
 }
@@ -25,5 +26,5 @@ export const NewsRequests = {
         requests.post('news', post),
     updateNews: (post: NewsResponse, id: number): Promise<NewsResponse> =>
         requests.put(`news/${id}`, post),
-    deleteNews: (id: number): Promise<void> => requests.delete(`news/${id}`),
+    deleteNews: (id: string): Promise<void> => requests.delete(`news/${id}`),
 };

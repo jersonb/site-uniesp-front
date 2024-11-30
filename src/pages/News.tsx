@@ -11,8 +11,8 @@ export function News() {
 
     useEffect(() => {
         NewsRequests.getNewsList()
-            .then(news => setNews(news))
-            .catch(console.log);
+            .then(setNews)
+            .catch(console.error);
         return () => { };
     }, [])
 
