@@ -63,26 +63,32 @@ Opens source JavaScript library that allows you to create user interfaces (UI) f
 
 Strongly typed programming language that builds on JavaScript, offering better tools at any scale.
 
+### [Vite](https://vite.dev/)
+
+🛠️ **Application builder**
+
 ### Structure and files
 
-📂src
-├─ 📂 api
-│  └─ 📃 api.ts
-├─ 📂 assets
-├─ 📂 components
-│  ├─ 📃 BannerAd.tsx
-│  └─ 📃 Navbar.tsx
-├─ 📂 pages
-│  ├─ 📂 admin
-│  │  ├─ 📃 AdminNews.tsx
-│  │  ├─ 📃 CreateNews.tsx
-│  │  └─ 📃 UpdateNews.tsx
-│  ├─ 📃 College.tsx
-│  ├─ 📃 Home.tsx
-│  ├─ 📃 LawDataProtection.tsx
-│  ├─ 📃 News.tsx
-│  └─ 📃 ViewNews.tsx
-└─ 📃 App.tsx
+``` .
+     📂src 
+      ├─ 📂 api             # Http comunications 
+      │  └─ 📃 api.ts                   
+      ├─ 📂 assets          # Internal static files
+      ├─ 📂 components      # Reusable parts of system
+      │  ├─ 📃 BannerAd.tsx
+      │  └─ 📃 Navbar.tsx
+      ├─ 📂 pages           # Segragation views
+      │  ├─ 📂 admin        # Menager news
+      │  │  ├─ 📃 AdminNews.tsx
+      │  │  ├─ 📃 CreateNews.tsx
+      │  │  └─ 📃 UpdateNews.tsx
+      │  ├─ 📃 College.tsx
+      │  ├─ 📃 Home.tsx
+      │  ├─ 📃 LawDataProtection.tsx
+      │  ├─ 📃 News.tsx
+      │  └─ 📃 ViewNews.tsx
+      └─ 📃 App.tsx         # Application orchestrator
+```
 
 ### WEB API
 
