@@ -35,10 +35,56 @@ VITE_NEWS_API=<back-end-url>
 * Website: linkedIn.com/in/jersonb
 * Github: [@jersonb](https://github.com/jersonb)
 
+## The Project
 
+### Dependencies
 
+#### [mui (Maretial Ui)](https://mui.com/)
 
-## WEB API
+Open source component library that implements Google's Material Design.
+
+#### [axios](https://axios-http.com/)
+
+Open source promise-based HTTP Client for node.js and the browser.
+
+#### [react-dom](https://pt-br.react.dev/reference/react-dom)
+
+The react project's native package for DOM manipulation.
+
+#### [react-router](https://reactrouter.com/)
+
+Open source library for React projects. Responsible for the SPA strategy, making changes to components via route calls.
+
+#### [React](https://react.dev/)
+
+Opens source JavaScript library that allows you to create user interfaces (UI) for web applications
+
+#### [TypeScript](https://www.typescriptlang.org/)
+
+Strongly typed programming language that builds on JavaScript, offering better tools at any scale.
+
+### Structure and files
+
+📂src
+├─ 📂 api
+│  └─ 📃 api.ts
+├─ 📂 assets
+├─ 📂 components
+│  ├─ 📃 BannerAd.tsx
+│  └─ 📃 Navbar.tsx
+├─ 📂 pages
+│  ├─ 📂 admin
+│  │  ├─ 📃 AdminNews.tsx
+│  │  ├─ 📃 CreateNews.tsx
+│  │  └─ 📃 UpdateNews.tsx
+│  ├─ 📃 College.tsx
+│  ├─ 📃 Home.tsx
+│  ├─ 📃 LawDataProtection.tsx
+│  ├─ 📃 News.tsx
+│  └─ 📃 ViewNews.tsx
+└─ 📃 App.tsx
+
+### WEB API
 
 ⚙️ **Contract comunication news json**
 
