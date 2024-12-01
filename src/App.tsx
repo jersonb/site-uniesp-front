@@ -7,7 +7,7 @@ import { News } from './pages/News'
 import { ViewNews } from './pages/ViewNews'
 import { Box, Container, CssBaseline } from '@mui/material'
 import { College } from './pages/College'
-import { LowDataProtection } from './pages/LowDataProtection'
+import { LawDataProtection } from './pages/LawDataProtection'
 import { AdminNews } from './pages/admin/AdminNews'
 import { UpdateNews } from './pages/admin/UpdateNews'
 import { CreateNews } from './pages/admin/CreateNews'
@@ -28,7 +28,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
              <Route path="/a-faculdade" element={<College />} />
-            <Route path="/dpo-lgpd" element={<LowDataProtection />} />
+            <Route path="/dpo-lgpd" element={<LawDataProtection />} />
             <Route path="/noticias" element={<News />} />
             <Route path="/visualiza-noticia/:id" element={<ViewNews />} />
             <Route path="/admin-noticias" element={<AdminNews />} />

@@ -9,7 +9,7 @@ const cardStyle = {
     p: 3
 };
 
-export function LowDataProtection() {
+export function LawDataProtection() {
     return (
         <Box sx={{ p: 4, backgroundColor: '#f0f0f0', borderRadius: '8px' }}>
         <Typography variant='h3' gutterBottom>
