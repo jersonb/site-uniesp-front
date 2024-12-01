@@ -8,7 +8,7 @@ export interface NewsResponse {
 }
 
 const instance = axios.create({
-    baseURL: 'http://localhost:5270/api'
+    baseURL: import.meta.env.VITE_NEWS_API
 });
 const responseBody = (response: AxiosResponse) => response.data;
 
