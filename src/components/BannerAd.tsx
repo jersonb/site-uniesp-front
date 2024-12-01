@@ -10,7 +10,7 @@ export function BannerAd() {
         borderRadius: '8px', 
         overflow: 'hidden',       })
     return (
-        <StyledBannerAd>
+        <StyledBannerAd style={{opacity:'90%'}}>
         <img
           src="/VESTIBULAR.gif"
           alt="Banner do Vestibular"

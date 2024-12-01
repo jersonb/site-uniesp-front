@@ -9,6 +9,8 @@ import { Box, Container, CssBaseline } from '@mui/material'
 import { College } from './pages/College'
 import { LowDataProtection } from './pages/LowDataProtection'
 import { AdminNews } from './pages/admin/AdminNews'
+import { UpdateNews } from './pages/admin/UpdateNews'
+import { CreateNews } from './pages/admin/CreateNews'
 
 function App() {
 
@@ -30,8 +32,8 @@ function App() {
             <Route path="/noticias" element={<News />} />
             <Route path="/visualiza-noticia/:id" element={<ViewNews />} />
             <Route path="/admin-noticias" element={<AdminNews />} />
-            {/*<Route path="/cadastrar-noticia" element={<CadastroNoticia />} />
-            <Route path="/editar-noticia/:id" element={<EditarNoticia />} /> */}
+            <Route path="/cadastrar-noticia" element={<CreateNews />} />
+            <Route path="/editar-noticia/:id" element={<UpdateNews />} /> *
           </Routes>
 
         </Box>

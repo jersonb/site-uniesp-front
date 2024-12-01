@@ -14,7 +14,7 @@ export function AdminNews() {
 
     }, [])
 
-    const removerNoticia = (id: string) => {
+    const removeNews = (id: string) => {
 
         NewsRequests.deleteNews(id)
             .then(() => setNews(news.filter(noticia => noticia.id !== id)))
@@ -34,7 +34,7 @@ export function AdminNews() {
                         <Button variant="contained" color="secondary" component={Link} to={`/editar-noticia/${news.id}`} sx={{ mr: 1 }}>
                             Editar
                         </Button>
-                        <Button variant="contained" color="error" onClick={() => removerNoticia(news.id)}>
+                        <Button variant="contained" color="error" onClick={() => removeNews(news.id)}>
                             Remover
                         </Button>
                     </ListItem>

@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 export interface NewsResponse {
     id: string,
     title: string,
-    subtitle:string,
+    subtitle: string,
     linkImage: string,
     content: string
 }
@@ -22,9 +22,9 @@ const requests = {
 export const NewsRequests = {
     getNewsList: (): Promise<NewsResponse[]> => requests.get('news'),
     getNews: (id: string): Promise<NewsResponse> => requests.get(`news/${id}`),
-    createNews: (post: NewsResponse): Promise<NewsResponse> =>
-        requests.post('news', post),
-    updateNews: (post: NewsResponse, id: number): Promise<NewsResponse> =>
-        requests.put(`news/${id}`, post),
+    createNews: (news: NewsResponse): Promise<NewsResponse> =>
+        requests.post('news', news),
+    updateNews: (id: string, news: NewsResponse): Promise<NewsResponse> =>
+        requests.put(`news/${id}`, news),
     deleteNews: (id: string): Promise<void> => requests.delete(`news/${id}`),
 };
